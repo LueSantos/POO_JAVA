@@ -2,8 +2,12 @@ package aula;
 
 public class PessoaJuridica extends ImpostoDeRenda {
 	
+	// Atributos 
+	
 	private String cnpj;
 	private String inscEstadual;
+	
+	// Construtor com herança;
 	
 	public PessoaJuridica(String nome, double rendimentos, String cnpj, String inscEstadual) {
 		super(nome, rendimentos);
@@ -11,7 +15,7 @@ public class PessoaJuridica extends ImpostoDeRenda {
 		this.inscEstadual = inscEstadual;
 	}
 
-
+	//Sobrescrição do método de calculo herdado da super classe;
 	@Override
 	public void calculoIR() {
 		this.rendimentos = this.rendimentos - (this.rendimentos * 0.15);
